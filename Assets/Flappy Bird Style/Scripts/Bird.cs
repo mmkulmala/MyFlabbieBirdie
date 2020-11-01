@@ -33,7 +33,13 @@ public class Bird : MonoBehaviour
 				//..giving the bird some upward force.
 				rb2d.AddForce(new Vector2(0, upForce));
 			}
+			// hitting esc to quit the game
+			else if (Input.GetKey(KeyCode.Escape) == true)
+			{
+				Application.Quit();
+			}
 		}
+		
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
